@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useState,useCallback ,useEffect } from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
+import Home from './Page/Home/Home';
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -30,19 +31,17 @@ export default function App() {
     return null;
   }
   return (
-    <SafeAreaView style={styles.container} onLayout={onLayoutRootView}>
-      <View >
-        <Text>App</Text>
-      </View>
+    <SafeAreaView  onLayout={onLayoutRootView} style={styles.main}>
+    <Home/>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  main:{
+    width:"100%",
+    height:"100%",
+    backgroundColor:"#F0F0F0",
+    
+  }
+})
