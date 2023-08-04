@@ -8,13 +8,17 @@ function Home() {
   return (
     <View style={styles.home}>
         <Navbar/>
-        <Category/>
         <Banner/>
+        <Category/>
     </View>
   )
 }
 const styles = StyleSheet.create({
     home:{
+      display:"flex",
+      flexDirection:'column',
+      justifyContent:'center',
+      gap:23,
         marginHorizontal:10,
     marginVertical:20
     }
